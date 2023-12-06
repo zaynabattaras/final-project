@@ -17,10 +17,10 @@
     <p>
       Click anywhere on the map to learn more about the Sudanese people of that region.
     </p>
-    <div id="map"></div>
+    <div id="map" onmouseover= "highlightFeature(event)" onmouseout="resetHighlight(event)"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="js_test.js"></script>
+    <script src="js/statesData.js"> </script>
   <script src="js/main.js"> </script>
   </body>
 </html>

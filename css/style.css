@@ -3,4 +3,7 @@ h1{
 }
 #map {
     height: 400px;
+    width:600;
+    margin-left: center;
+    margin-right: center;
 }
