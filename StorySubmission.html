@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Story Submission</title>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Home Page</title>
+      </head>
+  
+  <body>
+
+    <h1> Share your Story</h1>
+
+    <label for="Story Title"><h2>Story Title:</h2></label>
+    <input type="text" id="storyTitle" placeholder="Pick a Title for your Story">
+    <label for="State"><h2>State:</h2></label>
+    <input type="text" id="state" placeholder="Region story occured">
+    <label for="Story"><h2>Story:</h2></label>
+    <input type="text" id="story">
+    <label for="Image"><h2>Image:</h2></label>
+    <!-- https://www.tutorialspoint.com/How-do-we-upload-external-file-on-a-website-using-HTML-forms-->
+    <!--<form> -->  <!--</form> -->
+    <input type = "file" name = "upload" accept = "image/*" />   
+     <br>
+     <br>
+    <button onclick="SaveSubmission()">Submit</button>
+    
+    <script src="js/main.js"> </script>
+  </body>
+</html>
