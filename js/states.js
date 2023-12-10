@@ -1,12 +1,11 @@
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const state = params.get('state');
-console.log(state);
 let stateNP = document.getElementById("StateName");
 stateNP.innerHTML = state;
-stories
-//function that adds roll elements to the DOM
-function addingStories(story){
+//function that adds story elements to the DOM
+console.log(JSON.parse(localStorage.getItem("stories")))
+function addingStories(story,i){
 
     let template = document.getElementById("template");
     let clone = template.content.cloneNode(true);
@@ -15,27 +14,31 @@ function addingStories(story){
     let storyElementList = document.querySelector(".StoryL");
     storyElementList.append(story.element);
 
-    addStory(story);
+    addstory(story,i);
   }
   // add roll information to the DOM
-  function addRoll(story){
+  function addstory(story,i){
 
-    let imageTemp = story.element.querySelector(".Simages");
+    //let imageTemp = story.element.querySelector(".Simages");
     let descTemp = story.element.querySelector(".Sdescription");
-
-
-    imageTemp.src = story[imgSrc];
-    imageTemp.alt =story[imgAlt];
-
-    descTemp.innerHTML = story[storytitle] ;
+    let storyURl=  story.element.querySelector("#storyurl");
+   // imageTemp.src = story[imgSrc];
+    //imageTemp.alt =story[imgAlt];
+    storyURl.href= "stories.html?stateN="+state +i;
+    descTemp.innerHTML = story["storytitle"] ;
 
     
 
   }
 function populateStories(){
     let stories = JSON.parse(localStorage.getItem("stories")) || {};
-    placeholderS = document.getElementById("placeholderS")
-    if (Object.keys(stories).length ===0){ 
-        d
+    if (Object.keys(stories).length >=0){ 
+        let stateStories = stories[state];
+        for (let i = 0; i<stateStories.length; i++){
+            let index =i;
+            addingStories(stateStories[index],index);
+        }
     }
+  
 }
+populateStories();
