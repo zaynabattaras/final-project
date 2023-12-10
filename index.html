@@ -12,7 +12,7 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
         <link rel="stylesheet" href="css/style.css">
-        <title>Home Page</title>
+      
       </head>
   
   <body>
@@ -23,22 +23,23 @@
           <a href = index.html> <h2>Map</h2></a>
         </div>
         <div class = StorySubmission>
-          <a href = StorySubmission.html>  <button> <h2>Story Submission</h2></button> </a>
+          <a href = StorySubmission.html>   <h2>Story Submission</h2> </a>
         </div>
       </div>
     </header>
     <h1> Remember Sudan</h1>
     <div class="mapC">
-    <p class = "dText"> Due to the the war in Sudan starting in April 2023 that has killed over 10,000 people (as of November 10th 2023) and many Sudanese people have been displaced from their ancestral homes and villages. Sudan is home to the most generous and kind people with the most beautiful stories and those stories deserve to be told.
-    </p>
-    <p class = "dText">
-      Click anywhere on the map to learn more about the Sudanese people of that region.
-    </p>
-    
-    <div class="mapC">
-      <div id="map" onmouseover= "highlightFeature(event)" onmouseout="resetHighlight(event)" onclick="clickToPage(event)"></div>
+      <p class = "dText"> Due to the the war in Sudan starting in April 2023 that has killed over 10,000 people (as of November 10th 2023) and many Sudanese people have been displaced from their ancestral homes and villages. Sudan is home to the most generous and kind people with the most beautiful stories and those stories deserve to be told.
+      </p>
+      <p class = "dText">
+        Click anywhere on the map to learn more about the Sudanese people of that region.
+      </p>
+      <!--using leafletjs to create map dynamically-->
+      <div class="mapC">
+        <div id="map" onmouseover= "highlight(event)" onmouseout="reset(event)" onclick="clickToPage(event)"></div>
+      </div>
     </div>
-    <!--<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>-->
+    
     <script src="js/statesData.js"> </script>
   <script src="js/mapI.js"> </script>
   </body>

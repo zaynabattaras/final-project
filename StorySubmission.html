@@ -9,34 +9,51 @@
   
   <body>
     <header>
-    <!-- Header with Nav Bar-->
+        <!-- Header with Nav Bar-->
         <div class = "header"> 
-          <div>
+          <div class= StorySubmission>
             <a href = index.html> <h2>Map</h2></a>
           </div>
-          <div class = StorySubmission>
-            <a href = StorySubmission.html>  <button> <h2>Story Submission</h2></button> </a>
+          <div class = "mapPage">
+            <a href = StorySubmission.html >  <h2>Story Submission</h2> </a>
           </div>
         </div>
       </header>
     <h1> Share your Story</h1>
-
-    <label for="storyTitle"><h2>Story Title:</h2></label>
+      <!--inputs needed for each story-->
+    <label for="storyTitle">Story Title:</label>
+    <br>
+    <br>
     <input type="text" id="storyTitle" placeholder="Title for your Story">
-    <label for="state-select"><h2>State:</h2></label>
+    <br>
+    <br>
+    <label for="state-select">State:</label>
+    <br>
+    <br>
     <select name="state" id="state-select" >
         <option> Select Region of Story</option>
     </select>
-    <label for="story"><h2>Story:</h2></label>
+    <br>
+    <br>
+    <label for="story">Story:</label>
+    <br>
+    <br>
     <input type="text" id="story">
-    <label for="image"><h2>Image:</h2></label>
-    <!-- https://www.tutorialspoint.com/How-do-we-upload-external-file-on-a-website-using-HTML-forms-->
-    <!--<form> -->  <!--</form> -->
+    <br>
+    <br>
+    <label for="image">Image:</label>
+    <br>
+    <br>
     <input type = "file" name = "upload" accept = "image/*" id = "image"/>   
-    <label for="imagedisc"><h2>Image Description:</h2></label>
+    <br>
+    <br>
+    <label for="imagedisc">Image Description:</label>
+    <br>
+    <br>
     <input type="text" id="imagedisc">
     <br>
     <br>
+    <!--save all inputs dynamically-->
     <button onclick="SaveSubmission()">Submit</button>
     <div class="uploaded"></div>
     <script src="js/statesData.js"> </script>

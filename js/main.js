@@ -1,4 +1,3 @@
-console.log("here");
 //dictionary of all story submissions per state
 let stories = JSON.parse(localStorage.getItem("stories")) || {};
 let stateFeatures = statesData.features
@@ -16,13 +15,14 @@ if (Object.keys(stories).length ===0){
         if (populateStates){ 
             stories[stateN] = [];
         }
+        //creating option for each state in menu
         var stateO = document.createElement('option'); 
         stateO.text = stateN;
         stateO.value = stateN;
         stateSelect.add(stateO);
     }
 localStorage.setItem("stories", JSON.stringify(stories));
-
+//created to save all inputs of form
 function SaveSubmission(){
     stories = JSON.parse(localStorage.getItem("stories"))
     storyDic = {}
@@ -31,14 +31,9 @@ function SaveSubmission(){
     let imageInput = document.getElementById("image");
     let imageDescription = document.getElementById("imagedisc").value;
     let  stateName = stateSelect.options[stateSelect.selectedIndex].text;
-    //console.log(storytitle);
-   // console.log(storyText);
-   // console.log(imageInput);
-    //console.log(stateName);
     storyDic["storytitle"] = storytitle;
     storyDic["storyText"] = storyText;
     storyDic["imgAlt"] = imageDescription;
-    //storyDic["imgSrc"] = "";
     //how to use filereader
     //https://javascript.info/file
     if (imageInput.files && imageInput.files[0]) {
@@ -54,16 +49,9 @@ function SaveSubmission(){
         };
        reader.readAsDataURL(imageInput.files[0]);
     };
-    //stories[stateName] = stories[stateName].push(storyDic);
-    //console.log(Object.keys(storyDic));
-   // let storiesA = stories[stateName];
-   // storiesA.push(storyDic);
-    //stories[stateName] = storiesA;
-   // console.log(stories)
-    //localStorage.setItem("stories", JSON.stringify(stories));
-    //console.log(JSON.parse(localStorage.getItem("stories")));
-}
 
+}
+//use to update local storage of stories
 function updateStories(stateN, storydic){
     let storiesA = stories[stateN];
     storiesA.push(storydic);
@@ -71,7 +59,6 @@ function updateStories(stateN, storydic){
     localStorage.setItem("stories", JSON.stringify(stories));
     console.log(JSON.parse(localStorage.getItem("stories")));
 }
-//console.log(stories["Al-Jazeera"])
-//localStorage.clear();
+
 
 
