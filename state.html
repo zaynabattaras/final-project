@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>State</title>
   </head>
@@ -17,7 +18,7 @@
         </div>
       </header>
     <div class = "title">
-        <h1> Khartoum</h1>
+        <h1 id="StateName"> Khartoum</h1>
     </div>
    
     <h2 class="StateH"> History</h2>
@@ -33,6 +34,7 @@
         Stories
     </h2>
     <div class=" StoryL"> 
+        <template id = "template"> 
         <div class = "stories">
             <a href = stories.html> 
             <div class = "Scard"> 
@@ -50,6 +52,7 @@
         </div>
         </a>
         </div>
+        </template>
         <div class = "stories">
             <a href = stories.html>
             <div class = "Scard"> 
@@ -85,6 +88,7 @@
         </a>
         </div>
     </div>
-
+    <script src="js/statesData.js"> </script>
+    <script src="js/states.js"> </script>
   </body>
 </html>

@@ -7,7 +7,7 @@
 
 // Initialize the map
 console.log(statesData);
-var map = L.map('map').setView([16, 30.5], 6);
+var map = L.map('map').setView([16, 30.5], 5);
 
 // Add a tile layer (you can use different tile providers)
 var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
