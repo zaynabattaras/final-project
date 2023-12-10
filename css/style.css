@@ -1,13 +1,19 @@
 
 body {
-    font-family:   Cardo,Arial, Helvetica, sans-serif, sans-serif;
+    font-family:   Arial, Helvetica, sans-serif, sans-serif;
+    width: 1200px;
+    margin: 50px;
+    padding-right:50;
 }
+
 h1{
-    color: red
+    color:darkolivegreen;
+    text-align: center;
+    font-size: 75px;
 }
-#map {
-    height: 400px;
-    width:600;
+#map{
+    height: 700px;
+    width:800px;
     margin-left: center;
     margin-right: center;
 }
@@ -15,25 +21,41 @@ h3{
     font-weight: 100;
 }
 
-#description{
+.Sdescription{
     width: 400px;
-    padding-right: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color:white;
+}
+.Simages{
+    width: 200px;
+    height: 200px;
+    padding-right: 20px;
+   
 }
 .stories{
     border: 5px;
     border-color: black;
     padding-bottom: 50px;
+    width: 550px;
+    padding-right: 50px;
 }
-#color{
+.Scard{
     background-color: darkolivegreen;
     display: flex;
     flex-direction: row;
     padding-top: 20px;
     padding-bottom: 20px;
-    width:400px;
+    width:550px;
     height:200px;
     border:solid;
     border-radius: 20px;
+    justify-content: center;
+   
+}
+.Scard:hover{
+    background:#800020;
+    border: 10px;
 }
 
 a{
@@ -45,6 +67,7 @@ a{
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-end;
+    margin-left: 20px;
 }
 
 .mapPage{
@@ -52,5 +75,39 @@ a{
 }
 .StorySubmission{
     padding-left: 20px;
+    padding-right: 50px;
     
+}
+
+.dText{
+    padding-right: 50px;
+    text-align: left;
+}
+.StoryL {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.title{
+    text-align: center;
+    font-size: 75px;
+}
+.mapC{
+    width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imagSP{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.formatSP{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    text-align: center;
 }

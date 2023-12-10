@@ -6,10 +6,12 @@
 
 
 // Initialize the map
-var map = L.map('map').setView([15, 30], 5);
+console.log(statesData);
+var map = L.map('map').setView([16, 30.5], 6);
 
 // Add a tile layer (you can use different tile providers)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 L.geoJson(statesData).addTo(map);
@@ -26,7 +28,6 @@ function style(feature) {
         fillOpacity: 0.7
     };
 }
-L.geoJson(statesData, {style: style}).addTo(map);
 
 function highlightFeature(event) {
     var layer = event.target;
@@ -45,12 +46,24 @@ function resetHighlight(event) {
     console.log("in reset");
     geojson.resetStyle(event.target);
 }
-
-function clickToPage(event){
-    //var layer = event.target;
-    window.location.href = 'state.html';
-}
 var geojson;
+function clickToPage(event){
+    var layer = event.target;
+   //console.log(layer.feature);
+   //of (layer instanceof L.geojson) {
+        // Log the entire GeoJSON feature
+    stateName = layer.feature.properties.name;
+        console.log(layer.feature.properties.name);
+    //let locationF = layer.feature;
+   // }
+    //let locationP = locationF["properties"];
+
+
+   // console.log(location)
+   window.location.href = 'state.html?state='+stateName;
+}
+//var geojson;
+//geojson = L.geoJson(statesData);
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
